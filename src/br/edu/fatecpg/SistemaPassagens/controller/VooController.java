@@ -30,7 +30,7 @@ public class VooController {
         sb.append("origem: ").append(v.getOrigem()).append("\n");
         sb.append("destino: ").append(v.getDestino()).append("\n");
         sb.append("assentos disponiveis: ").append(v.getAssentosDisponiveis()).append("\n");
-        sb.append("valor assento: ").append(v.getValorAssento()).append("\n");
+        sb.append("valor assento: R$").append(String.format("%.2f",v.getValorAssento())).append("\n");
         if (v.isIdaVolta()){
             sb.append("ida e volta").append("\n");
         }

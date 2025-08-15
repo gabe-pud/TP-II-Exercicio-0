@@ -48,11 +48,11 @@ public class PassagemController {
         if (v.isPontoTuristico()){
             sb.append("ponto turistico").append("\n");
         }
-        sb.append("valor passagem: ").append(p.getValorPassagem()).append("\n");
+        sb.append("valor passagem: R$").append(String.format("%.2f",p.getValorPassagem())).append("\n");
         if(p.isPago()){
-            sb.append("status: PAGO");
+            sb.append("status: PAGO").append("\n");
         } else {
-            sb.append("status: NÃO PAGO");
+            sb.append("status: NÃO PAGO").append("\n");
         }
         System.out.println(sb);
     }

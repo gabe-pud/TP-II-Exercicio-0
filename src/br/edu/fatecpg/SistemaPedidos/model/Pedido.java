@@ -23,10 +23,11 @@ public class Pedido {
 
     public String infoPedido(){
         StringBuilder sb = new StringBuilder();
-        sb.append("item | qtd | preco un\n");
+        sb.append("      item      | qtd | preco un.\n");
         for (ItemPedido i: itens){
-            sb.append(i.getNomeDoPrato()).append(" - ");
-            sb.append(i.getQuantidade()).append(" - ");
+
+            sb.append(String.format("%-15s",i.getNomeDoPrato())).append(" | ");
+            sb.append(" ").append(i.getQuantidade()).append("  | ");
             sb.append("R$").append(String.format("%.2f",i.getPrecoUnitario())).append("\n");
         }
         sb.append("total: R$").append(String.format("%.2f",total)).append("\n\n");
